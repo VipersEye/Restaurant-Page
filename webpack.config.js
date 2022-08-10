@@ -2,8 +2,25 @@ const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
 const ESlintWebpackPlugin = require('eslint-webpack-plugin');
+
+const isDev = process.env.NODE_ENV === 'development';
+const isProd = !isDev;
+const optimization = () => {
+    if (isDev) {
+        return undefined;
+    }
+    return {
+        minimizer: [
+            new TerserPlugin(),
+            new CssMinimizerWebpackPlugin()
+        ]
+    };
+}
+console.log('isDev', isDev);
+console.log('isProd', isProd);
 
 /** @type {import('webpack').Configuration}*/
 
@@ -25,6 +42,7 @@ module.exports = {
             'styles': path.resolve(__dirname, 'src/assets/styles')
         }
     },
+    optimization: optimization(),
     plugins: [
         new HTMLWebpackPlugin({
             template: './index.html'
@@ -32,7 +50,6 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
         }),
-        new CssMinimizerWebpackPlugin(),
         new ESlintWebpackPlugin()
     ],
     module: {
