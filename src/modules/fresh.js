@@ -7,6 +7,7 @@ export default function () {
 
     let section = document.createElement('section');
     section.classList.add('section');
+    section.setAttribute('id', 'fresh');
 
     let sectionImage = document.createElement('img');
     sectionImage.classList.add('section__image_fresh');

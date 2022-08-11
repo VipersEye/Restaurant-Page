@@ -7,6 +7,7 @@ export default function () {
 
     let section = document.createElement('section');
     section.classList.add('section');
+    section.setAttribute('id', 'local');
 
     let sectionContent = document.createElement('div');
     sectionContent.classList.add('section__content');

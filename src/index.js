@@ -17,6 +17,8 @@ const removeSection = () => {
 let navButtons = document.querySelectorAll('.header__nav-btn');
 navButtons.forEach( (btn) => {
     btn.addEventListener('click', (e) => {
+        let currentSectionName = document.querySelector('section').getAttribute('id');
+        if (currentSectionName === e.target.textContent) return;
         removeSection();
         switch (e.target.textContent) {
             case ('home'):

@@ -6,6 +6,7 @@ export default function () {
 
     let homeSection = document.createElement('section');
     homeSection.classList.add('home');
+    homeSection.setAttribute('id', 'home');
 
     let homeLogo = document.createElement('img');
     homeLogo.classList.add('home__logo');
