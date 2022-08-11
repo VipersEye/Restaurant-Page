@@ -6,9 +6,6 @@
 
     display: grid;
     place-items: center;
-
-    background: url('../images/home.jpg') center no-repeat;
-    background-size: cover;
 }
 
 .home__logo {

@@ -26,22 +26,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #content {
-    position: relative;
+    display: flex;
+    flex-direction: column;
 
     width: 100%;
     height: 100%;
+
+    background-image: url('../images/herbas.png');
+    background-color: #fff;
+    background-position: center;
 }
 
 .header {
-    position: absolute;
-    left: 0;
-    right: 0;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 2rem 6rem 2rem 0;
+    padding: 2rem 6rem 2rem 3rem;
 
     font-family: 'Roboto', sans-serif;
     color: var(--color-text);
