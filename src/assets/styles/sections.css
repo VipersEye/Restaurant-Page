@@ -20,14 +20,28 @@
 }
 
 .section__content-logo {
+    position: relative;
+
     margin-bottom: 3rem;
+
+    animation-name: icon-slide;
+    animation-duration: 2.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .section__header {
+    position: relative;
+
     font-family: 'Roboto', sans-serif;
     font-size: 5rem;
     text-transform: uppercase;
     font-weight: 900;
+
+    animation-name: header-slide;
+    animation-duration: 2.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .section__header::after {
@@ -42,10 +56,95 @@
 }
 
 .section__text {
+    position: relative;
+
     font-size: 1.5rem;
     font-weight: 500;
+
+    animation-name: text-slide;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .section__image {
+    position: relative;
+
     max-height: 100%;
+
+    animation-name: image-slide;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.section__image_fresh {
+    position: relative;
+
+    max-height: 100%;
+
+    animation-name: image-fresh-slide;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes image-slide {
+    from {
+        right: -20rem;
+        opacity: 0.2;
+    }
+
+    to {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes image-fresh-slide {
+    from {
+        left: -20rem;
+        opacity: 0.2;
+    }
+
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes text-slide {
+    from {
+        top: 10rem;
+        opacity: 0.2;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes header-slide {
+    from {
+        bottom: 5rem;
+        opacity: 0.2;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes icon-slide {
+    from {
+        bottom: 3rem;
+        opacity: 0.2;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1;
+    }
 }

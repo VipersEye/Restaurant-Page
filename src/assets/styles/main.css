@@ -35,6 +35,8 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url('../images/herbas.png');
     background-color: #fff;
     background-position: center;
+
+    overflow: hidden;
 }
 
 .header {

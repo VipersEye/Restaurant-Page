@@ -9,5 +9,27 @@
 }
 
 .home__logo {
+    position: relative;
+    bottom: 9rem;
+
     width: 20rem;
+
+    opacity: 0.2;
+
+    animation-name: logo-slide;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes logo-slide {
+    from {
+        bottom: 9rem;
+        opacity: 0.2;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1;
+    }
 }

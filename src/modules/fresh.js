@@ -9,7 +9,7 @@ export default function () {
     section.classList.add('section');
 
     let sectionImage = document.createElement('img');
-    sectionImage.classList.add('section__image');
+    sectionImage.classList.add('section__image_fresh');
     sectionImage.setAttribute('src', image);
     sectionImage.setAttribute('alt', 'section image');
 
