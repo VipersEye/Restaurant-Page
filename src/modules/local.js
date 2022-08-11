@@ -11,6 +11,11 @@ export default function () {
     let sectionContent = document.createElement('div');
     sectionContent.classList.add('section__content');
 
+    let sectionLogo = document.createElement('img');
+    sectionLogo.classList.add('section__content-logo');
+    sectionLogo.setAttribute('src', icon);
+    sectionLogo.setAttribute('alt', 'section logo');
+
     let sectionHeader = document.createElement('h2');
     sectionHeader.classList.add('section__header');
     sectionHeader.textContent = 'local distillation';
@@ -27,6 +32,7 @@ export default function () {
     content.appendChild(section);
     section.appendChild(sectionContent);
     section.appendChild(sectionImage);
+    sectionContent.appendChild(sectionLogo);
     sectionContent.appendChild(sectionHeader);
     sectionContent.appendChild(sectionText);
 }
