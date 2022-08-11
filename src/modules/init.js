@@ -12,7 +12,7 @@ export default function () {
 
     let nav = document.createElement('nav');
     nav.classList.add('header__nav');
-    let navTitles = ['home', 'story', 'fresh', 'local', 'contact'];
+    let navTitles = ['home', 'story', 'fresh', 'local'];
     for (let i = 0; i < navTitles.length; i++) {
         let navItem = document.createElement('button');
         navItem.setAttribute('type', 'button');

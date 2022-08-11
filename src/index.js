@@ -5,4 +5,32 @@ import fresh from 'modules/fresh.js';
 import local from 'modules/local.js';
 
 initPage();
-local();
+home();
+
+const removeSection = () => {
+    let content = document.querySelector('#content');
+    let currentSection = content.querySelector('section');
+    if (currentSection === null) return;
+    content.removeChild(currentSection);
+};
+
+let navButtons = document.querySelectorAll('.header__nav-btn');
+navButtons.forEach( (btn) => {
+    btn.addEventListener('click', (e) => {
+        removeSection();
+        switch (e.target.textContent) {
+            case ('home'):
+                home();
+                break;
+            case ('story'):
+                story();
+                break;
+            case ('fresh'):
+                fresh();
+                break;
+            case ('local'):
+                local();
+                break;
+        }
+    });
+});
