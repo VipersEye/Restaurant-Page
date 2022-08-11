@@ -1,6 +1,6 @@
 import 'styles/sections.css';
 import image from 'images/fresh.jpg';
-import icon from 'images/icon.png';
+import icon from 'images/icon-fresh.png';
 
 export default function () {
     let content = document.querySelector('#content');
