@@ -1,0 +1,45 @@
+/* section ================================ */
+
+.section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.section__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 8rem;
+
+    color: var(--color-text);
+    text-align: center;
+
+    background-image: url('../images/herbas.png');
+    background-color: #fff;
+}
+
+.section__header {
+    font-family: 'Roboto', sans-serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.section__header::after {
+    content: '';
+    display: block;
+
+    margin: 1.5rem auto;
+    width: 5rem;
+    height: 1rem;
+
+    background-color: #ed9898;
+}
+
+.section__text {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
