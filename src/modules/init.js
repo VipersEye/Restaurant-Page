@@ -1,4 +1,5 @@
 import 'styles/main.css';
+import 'styles/adoptive.css';
 
 export default function () {
     let content = document.querySelector('#content');
